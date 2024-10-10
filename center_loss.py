@@ -12,7 +12,7 @@ class CenterLoss(nn.Module):
         self.verbose = verbose
         self.device = device
         # self.centers = nn.Parameter(torch.randn(num_classes, feat_dim).to(self.device), requires_grad=False)
-        self.centers = torch.load("/home/deepctrl/liwenju/ocr-train/lwjocr/output-resnet50/centers_epoch_9_batch_2000_centers.pth")
+        self.centers = torch.load("Your_path/center_loss_centers.pth")
         self.centers = self.centers.to(self.device)
         self.centers.requires_grad = False
 
